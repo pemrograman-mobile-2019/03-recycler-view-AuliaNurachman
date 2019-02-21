@@ -44,5 +44,23 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
         Button buttonContact = viewHolder.messageButton;
         buttonContact.setText(itemContact.isOnline()? "Message" : "Offline");
         buttonContact.setEnabled(itemContact.isOnline());
+
+
+    }
+    @Override
+    public int getItemCount() {
+
+        return mContact.size();
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        private TextView nameTextView;
+        private Button messageButton;
+        public ViewHolder(@NonNull View itemView) {
+
+            super(itemView);
+            nameTextView = itemView.findViewById(R.id.contact_name);
+            messageButton = itemView.findViewById(R.id.message_button);
+        }
     }
 }
