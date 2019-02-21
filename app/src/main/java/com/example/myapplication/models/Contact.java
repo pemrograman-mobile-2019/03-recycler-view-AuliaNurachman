@@ -11,7 +11,13 @@ public class Contact {
         mOnline = online;
     }
 
+    public String getName() {
+        return mName;
+    }
 
+    public boolean isOnline() {
+        return mOnline;
+    }
     }
 
 
