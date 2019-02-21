@@ -21,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView rv = findViewById(R.id.rvContact);
         contacts = Contact.createContactsList( 10);
         ContactAdapter contactAdapter = new ContactAdapter(contacts);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(  this);
+        rv.setAdapter(contactAdapter);
+        rv.setLayoutManager(layoutManager);
 
     }
 }
